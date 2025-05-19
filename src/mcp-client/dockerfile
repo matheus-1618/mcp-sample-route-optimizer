@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY InlineAgent/ /app/InlineAgent/
+COPY .env /app/
+COPY gradio_mcp.py /app/
+COPY requirements.txt /app/
+
+
+WORKDIR /app/InlineAgent
+RUN pip3 install -e .
+
+WORKDIR /app
+RUN pip install -r requirements.txt
+
+# Expose port 7860 for Gradio
+EXPOSE 7860
+
+# Run the application
+CMD ["python", "gradio_mcp.py"]
