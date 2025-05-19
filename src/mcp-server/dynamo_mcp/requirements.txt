@@ -1,0 +1,10 @@
+argparse
+asyncio
+boto3
+botocore
+loguru
+pydantic
+fastmcp
+mcp[cli]
+uvicorn
+httpx

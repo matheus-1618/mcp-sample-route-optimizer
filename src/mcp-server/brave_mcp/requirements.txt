@@ -1,0 +1,12 @@
+boto3
+cryptography
+fastmcp
+mcp[cli]
+httpx
+pyjwt
+python-dotenv
+requests
+brave-search-python-client 
+uvicorn
+beautifulsoup4
+psutil
